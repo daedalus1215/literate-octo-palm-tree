@@ -66,19 +66,19 @@ spec:
       labels:
         app.kubernetes.io/name: guestbook
         app.kubernetes.io/component: frontend
-  spec:
-    containers:
-    - name: guestbook
-      image: karthequian/gb-frontend:v5
-      resources:
-        requests:
-          cpu: 100m
-          memory: 100Mi
-      env: 
-      - name: GET_HOSTS_FROM
-        value: dns
-      ports: 
-      - containerPort:80
+    spec:
+      containers:
+      - name: guestbook
+        image: karthequian/gb-frontend:v5
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env: 
+        - name: GET_HOSTS_FROM
+          value: dns
+        ports: 
+        - containerPort: 80
 ---
 ### Guestbook frontend service
 apiVersion: v1
